@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block action %}
+    <a href="{{url_for('mail.index')}}"><button class="btn-primary">Volver</button></a>
+{% endblock %}
+{% block header %}<h1>{% block title %} Crear correo {% endblock %}</h1>{% endblock %}
+{%block content %}
+    <form action="" method="post">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="correo@mail.com" autofocus >
+        </div>
+        <div class="form-group">
+            <label for="subject">Asunto</label>
+            <input type="text" name="subject" >
+        </div>
+        
+        <div class="form-group">
+            <label for="content">Contenido</label>
+            <textarea name="content" ></textarea>
+        </div>
+        <button class="btn-primary" type="submit">Enviar</button>
+        
+    </form>
+{% endblock %}
